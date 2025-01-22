@@ -12,10 +12,10 @@ public class Util {
 
     public static Connection getConnection() throws SQLException {
         Connection connection = null;
+
         try {
             Class.forName(DB_DRIVER);
             connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
-            System.out.println("Connection success");
         } catch (ClassNotFoundException e) {
             throw new SQLException("MySQL Driver not found.", e);
         }
