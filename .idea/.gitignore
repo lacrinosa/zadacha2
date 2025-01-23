@@ -7,11 +7,14 @@
 /dataSources/
 /dataSources.local.xml
 
+git rm -r --cached .idea
+git rm -r --cached target
+
 # Игнорировать папку .idea
 .idea/
 
 # Игнорировать папку target
 target/
 
-git rm -r --cached .idea
-git rm -r --cached target
+git add .gitignore
+git commit -m "Удалены папки target и .idea из репозитория и добавлены в .gitignore"
